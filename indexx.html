@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4f46e5',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300">
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 shadow-md bg-white dark:bg-gray-800">
+    <h1 class="text-xl font-bold text-primary">MySite</h1>
+    <div class="space-x-4">
+      <a href="#" class="hover:underline">Home</a>
+      <a href="#" class="hover:underline">About</a>
+      <a href="#" class="hover:underline">Contact</a>
+      <button id="toggleTheme" class="px-2 py-1 bg-primary text-white rounded">Toggle Theme</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-4">
+    <h2 class="text-4xl font-bold mb-4">Welcome to My Website</h2>
+    <p class="text-lg mb-6 max-w-xl mx-auto">This is a responsive website made with Tailwind CSS and JavaScript, all in one HTML file.</p>
+    <a href="#" class="px-6 py-3 bg-primary text-white rounded shadow hover:bg-indigo-700 transition">Get Started</a>
+  </section>
+
+  <!-- Features Section -->
+  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 py-10">
+    <div class="p-6 bg-white dark:bg-gray-800 rounded shadow">
+      <h3 class="text-xl font-semibold mb-2">Fast</h3>
+      <p>Built with performance in mind using Tailwind utility classes.</p>
+    </div>
+    <div class="p-6 bg-white dark:bg-gray-800 rounded shadow">
+      <h3 class="text-xl font-semibold mb-2">Responsive</h3>
+      <p>Fully responsive layout that works on all devices.</p>
+    </div>
+    <div class="p-6 bg-white dark:bg-gray-800 rounded shadow">
+      <h3 class="text-xl font-semibold mb-2">Modern</h3>
+      <p>Clean and modern design with dark mode support.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-gray-100 dark:bg-gray-800">
+    <p>© 2025 MySite. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const toggleTheme = document.getElementById('toggleTheme');
+    toggleTheme.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
